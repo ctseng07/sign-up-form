@@ -13,50 +13,64 @@
 <body>
     <div class="main">
         <div class="main-left">
-            <img id="left-img" src="./images/leftimg.jpg" />
+            <div>
+                <img src="./images/pngegg.png" alt="The Odin Project Logo">
+                <h1>Pure Bred Good Boy</h1>
+                <!-- <img id="left-img" src="./images/leftimg.jpg" /> -->
+            </div>
         </div>
         <div class="main-right">
             <div class="right-top">
-                <p>
-                    This is not a real online service! You know you need
-                    something like this in your life to help you realize your deepest dreams.
-                    Sign up now to get started.
-                </p>
-                <p>You know you want.</p>
-            </div>
-            <div class="right-center">
-                <p>Let's do this!</p>
-                <div class="input">
-                    <label for="first-name">FIRST NAME</label>
-                    <input type="text" name="first-name" id="first-name" required>
-                </div>
-                <div class="input">
-                    <label for="last-name">LAST NAME</label>
-                    <input type="text" name="last-name" id="last-name" required>
-                </div>
-                <div class="input">
-                    <label for="email">EMAIL</label>
-                    <input type="text" name="email" id="email" required>
-                </div>
-                <div class="input">
-                    <label for="phone-number">PHONE NUMBER</label>
-                    <input type="text" name="phone-number" id="phone-number" required>
-                </div>
-                <div class="input">
-                    <label for="password">PASSWORD</label>
-                    <input type="text" name="password" id="password" required>
-                </div>
-                <div class="input">
-                    <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="text" name="confirm-password" id="confirm-password" required>
+                <div>
+                    <p>
+                        This is not a real online service! You know you need
+                        something like this in your life to help you realize your deepest dreams.
+                        Sign up <em>now</em> to get started.
+                    </p>
+                    <p>You <em>know</em> you want.</p>
                 </div>
             </div>
-        </div>
-        <div class="right-bottom">
-            <button type="submit">Create Account</button>
-        </div>
-        <div class="log-in">
-            <p>Already have an account?</p> <a href="">Log in</a>
+            <div>
+                <div class="right-center">
+                    <p>Let's do this!</p>
+                    <form id="my-form">
+                        <!-- <form action="example.com/path" method="post" class="form"> -->
+                        <label for="first_name">FIRST NAME
+                            <input type="text" name="first_name" id="first_name" required autocomplete="off">
+                            <div id="fnError" class="error"></div>
+                        </label>
+                        <label for="last_name">LAST NAME
+                            <input type="text" name="last_name" id="last_name" required autocomplete="off">
+                            <div id="lnError" class="error"></div>
+                        </label>
+                        <label for="email">EMAIL
+                            <input type="email" name="email" id="email" required autocomplete="off">
+                            <div id="emailError" class="error"></div>
+                        </label>
+                        <label for="phone_number">PHONE NUMBER
+                            <input type="tel" name="phone_number" id="phone_number" required autocomplete="off"
+                                pattern='[0-9]{10}'>
+                            <div id="telError" class="error"></div>
+                        </label>
+                        <label for="password">PASSWORD
+                            <input type="password" name="password" id="password" required autocomplete="off"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                            <div id="passError" class="error"></div>
+                        </label>
+                        <label for="confirm_password">CONFIRM PASSWORD
+                            <input type="password" name="confirm_password" id="confirm_password" required
+                                autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                            <div id="passCoError" class="error"></div>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="submit">
+                <div>
+                    <button type="submit" form="my-form">Create Account</button>
+                    <p>Already have an account? <a href="">Log in</a></p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
